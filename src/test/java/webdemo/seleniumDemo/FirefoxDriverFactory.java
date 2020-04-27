@@ -21,7 +21,7 @@ public class FirefoxDriverFactory
 		FirefoxProfile ffprofile = new FirefoxProfile();
 		ffprofile.setPreference("intl.accept_languages","en-uk");
 		FirefoxOptions options = new FirefoxOptions();
-		//options.addArguments("--headless");
+		options.addArguments("--headless");
 		options.setProfile(ffprofile);
 		FirefoxDriver driver = new FirefoxDriver(options);
 		// Implicity wait -> max czas na znalezienie elementu na stronie

@@ -1,4 +1,4 @@
-package webdemo.seleniumDemo;
+package z1;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;

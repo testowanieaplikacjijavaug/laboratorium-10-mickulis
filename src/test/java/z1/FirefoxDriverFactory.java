@@ -17,12 +17,13 @@ public class FirefoxDriverFactory
 		else
 			System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
 
-
 		FirefoxProfile ffprofile = new FirefoxProfile();
 		ffprofile.setPreference("intl.accept_languages","en-uk");
+		ffprofile.setPreference("dom.webnotifications.enabled", false);
 		FirefoxOptions options = new FirefoxOptions();
 		options.addArguments("--headless");
 		options.setProfile(ffprofile);
+		options.addArguments("log-level=3");
 		FirefoxDriver driver = new FirefoxDriver(options);
 		// Implicity wait -> max czas na znalezienie elementu na stronie
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
